@@ -24,16 +24,16 @@ class BasicAuthSpec extends Specification {
 
     def "verify http basic auth works"() {
         when: 'Accessing a secured URL without authenticating'
-        client.toBlocking().exchange(HttpRequest.GET('/', )) // <6>
+        client.toBlocking().exchange(HttpRequest.GET('/', )) // <4>
 
         then: 'returns unauthorized'
-        HttpClientResponseException e = thrown(HttpClientResponseException)  // <7>
+        HttpClientResponseException e = thrown(HttpClientResponseException) // <5>
         e.status == HttpStatus.UNAUTHORIZED
 
         when: 'A secured URL, is accessed with Basic Auth'
         HttpRequest request = HttpRequest.GET('/', )
-                .basicAuth("sherlock", "password") // <8>
-        HttpResponse<String> rsp = client.toBlocking().exchange(request, String) // <9>
+                .basicAuth("sherlock", "password") // <6>
+        HttpResponse<String> rsp = client.toBlocking().exchange(request, String) // <7>
 
         then: 'the endpoint can be accessed'
         rsp.status == HttpStatus.OK

@@ -8,9 +8,8 @@ include::{sourceDir}/src/main/resources/application.yml[]
 
 <1> Enable Micronaut's security capabilities
 <2> Expose /login endpoint
-<3> Enable token based authentication
 
-You can define configuration files with *.properties, *.groovy or *.yml files. To use Yaml, add the next dependency to `build.gradle`.
+In Micronaut, you can define configuration files with *.properties, *.groovy or *.yml files. To use Yaml, add the next dependency to `build.gradle`.
 
 [source,groovy]
 .build.gradle
