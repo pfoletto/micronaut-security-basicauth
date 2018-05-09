@@ -22,16 +22,16 @@ class BasicAuthSpec extends Specification {
     @AutoCleanup
     RxHttpClient client = embeddedServer.applicationContext.createBean(RxHttpClient, embeddedServer.getURL()) // <3>
 
-    def "verify http basic auth works"() {
+    def "Verify HTTP Basic Auth works"() {
         when: 'Accessing a secured URL without authenticating'
-        client.toBlocking().exchange(HttpRequest.GET('/', )) // <4>
+        client.toBlocking().exchange(HttpRequest.GET('/')) // <4>
 
         then: 'returns unauthorized'
         HttpClientResponseException e = thrown(HttpClientResponseException) // <5>
         e.status == HttpStatus.UNAUTHORIZED
 
-        when: 'A secured URL, is accessed with Basic Auth'
-        HttpRequest request = HttpRequest.GET('/', )
+        when: 'A secured URL is accessed with Basic Auth'
+        HttpRequest request = HttpRequest.GET('/')
                 .basicAuth("sherlock", "password") // <6>
         HttpResponse<String> rsp = client.toBlocking().exchange(request, String) // <7>
 

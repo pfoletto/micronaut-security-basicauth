@@ -1,7 +1,7 @@
-Create the next configuration file:
+Create the a new `application.yml` configuration file:
 
 [source,groovy]
-.src/main/resources/application.yaml
+.src/main/resources/application.yml
 ----
 include::{sourceDir}/src/main/resources/application.yml[]
 ----
@@ -9,7 +9,7 @@ include::{sourceDir}/src/main/resources/application.yml[]
 <1> Enable Micronaut's security capabilities
 <2> Expose /login endpoint
 
-In Micronaut, you can define configuration files with *.properties, *.groovy or *.yml files. To use Yaml, add the next dependency to `build.gradle`.
+Micronaut supports configuration files in multiple formats, including *.properties, *.groovy or *.yml files. To use Yaml, add the following dependency to `build.gradle`.
 
 [source,groovy]
 .build.gradle
