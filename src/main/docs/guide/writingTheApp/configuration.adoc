@@ -8,16 +8,3 @@ include::{sourceDir}/src/main/resources/application.yml[]
 
 <1> Enable Micronaut's security capabilities
 <2> Expose /login endpoint
-
-Micronaut supports configuration files in multiple formats, including *.properties, *.groovy or *.yml files. To use Yaml, add the following dependency to `build.gradle`.
-
-[source,groovy]
-.build.gradle
-----
-dependencies {
-...
-..
-.
-include::{sourceDir}/build.gradle[tag=yaml]
-}
-----

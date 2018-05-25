@@ -1,6 +1,5 @@
 package demo
 
-import demo.services.AuthenticationProviderUserPassword
 import io.micronaut.context.ApplicationContext
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
