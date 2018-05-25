@@ -19,6 +19,7 @@ apply plugin:"application"
 //tag::applyplugingroovy[]
 apply plugin:"groovy"
 //end::applyplugingroovy[]
+apply plugin:"net.ltgt.apt-eclipse"
 apply plugin:"net.ltgt.apt-idea"
 
 
