@@ -19,20 +19,6 @@ include::{sourceDir}/build.gradle[tag=spock]
 }
 ----
 
-We are going to use Micronaut's HTTP Client. In order to do that, you need to add
-Micronaut's `http-client` dependency to your build file.
-
-[source,groovy]
-.build.gradle
-----
-dependencies {
-...
-..
-.
-include::{sourceDir}/build.gradle[tag=http-client]
-}
-----
-
 Create a tests which verifies the user authentication flow via Basic Auth.
 
 [source,groovy]
