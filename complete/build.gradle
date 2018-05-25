@@ -56,3 +56,7 @@ dependencies {
 shadowJar {
     mergeServiceFiles()
 }
+
+mainClassName = "example.Application"
+compileJava.options.compilerArgs += '-parameters'
+compileTestJava.options.compilerArgs += '-parameters'
