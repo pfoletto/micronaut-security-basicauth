@@ -1,4 +1,4 @@
-package demo
+package example.micronaut
 
 import io.micronaut.context.ApplicationContext
 import io.micronaut.http.HttpResponse

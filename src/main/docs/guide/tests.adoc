@@ -3,9 +3,9 @@ include::{commondir}/common-spockinjavaapp.adoc[]
 Create a tests which verifies the user authentication flow via Basic Auth.
 
 [source,groovy]
-.src/test/groovy/demo/BasicAuthSpec.groovy
+.src/test/groovy/example/micronaut/BasicAuthSpec.groovy
 ----
-include::{sourceDir}/src/test/groovy/demo/BasicAuthSpec.groovy[]
+include::{sourceDir}/src/test/groovy/example/micronaut/BasicAuthSpec.groovy[]
 }
 ----
 
