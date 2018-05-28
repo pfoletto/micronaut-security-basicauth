@@ -7,4 +7,4 @@ include::{sourceDir}/src/main/resources/application.yml[]
 ----
 
 <1> Enable Micronaut's security capabilities
-<2> Expose /login endpoint
+<2> Expose `/login` endpoint
